@@ -18,6 +18,11 @@ export class HomeComponent {
     private store: Store
   ) {}
 
+  /**
+   * Start the game by resetting the board and navigate to the game component
+   *
+   * @param {boolean} versusAI Whether the game mode is versus ai or not
+   */
   startGame(versusAI: boolean) {
     this.store
       .dispatch([

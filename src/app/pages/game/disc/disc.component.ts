@@ -1,5 +1,10 @@
 import { Component, Input } from '@angular/core';
 
+/**
+ * The disc component
+ *
+ * Display a disc
+ */
 @Component({
   selector: 'app-disc',
   templateUrl: './disc.component.html',

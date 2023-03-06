@@ -1,27 +1,30 @@
-# NgConnectFour
+# ng-connect-four
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+Ng Connect Four is a two-player connection rack game, in which the players choose a color and then take turns dropping colored tokens into a seven-column, six-row vertically suspended grid. The pieces fall straight down, occupying the lowest available space within the column. The objective of the game is to be the first to form a horizontal, vertical, or diagonal line of four of one's own tokens.
+
+## Features
+
+- Light/dark mode toggle
+- AI opponent
+- Responsive
+- Fast performance
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Documentation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+[Documentation](https://linktodocumentation)
 
-## Running end-to-end tests
+## Support
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+For support, email fake@fake.com or join our Slack channel.
 
-## Further help
+## License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[MIT](https://choosealicense.com/licenses/mit/)

@@ -15,17 +15,24 @@ export interface AppStateModel {
 })
 @Injectable()
 export class AppState {
+  /**
+   * Get a boolean representing whether the theme is dark or not
+   *
+   * @returns {boolean} Whether the theme is dark or not
+   */
   @Selector()
   static isDarkModeEnable(state: AppStateModel) {
     return state.darkMode;
   }
 
+  /**
+   * Set dark mode with the corresponding input
+   */
   @Action(SetDarkMode)
   setDarkMode(
     { patchState }: StateContext<AppStateModel>,
     { payload }: SetDarkMode
   ) {
-    console.log('setDarkMode');
     const body = document.getElementsByTagName('body')[0];
     body.classList.remove(payload ? 'light-mode' : 'dark-mode');
     body.classList.add(payload ? 'dark-mode' : 'light-mode');

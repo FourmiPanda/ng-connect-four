@@ -7,6 +7,9 @@ import { SharedModule } from 'src/app/shared/modules/shared/shared.module';
 import { MatButtonModule } from '@angular/material/button';
 import { DiscComponent } from './disc/disc.component';
 
+/**
+ * The game module
+ */
 @NgModule({
   declarations: [GameComponent, EndGameDialogComponent, DiscComponent],
   imports: [CommonModule, SharedModule, MatIconModule, MatButtonModule],

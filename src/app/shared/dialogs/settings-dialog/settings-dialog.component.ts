@@ -27,10 +27,19 @@ export class SettingsDialogComponent {
     });
   }
 
+  /**
+   * Switch between dark and light mode
+   */
   changeTheme() {
     this.store.dispatch(new SetDarkMode(!this.darkMode));
   }
 
+  /**
+   * Set discs color for entered player number
+   *
+   * @param {number} player Number corresponding to player (1 or 2)
+   * @param {any} e The event emitted by <input type="color" />
+   */
   setDiscColor(player: number, e: any) {
     this.store.dispatch(new SetDiscColor({ player, color: e.target.value }));
   }

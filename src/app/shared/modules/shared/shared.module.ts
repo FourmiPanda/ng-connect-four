@@ -23,6 +23,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { ToolbarComponent } from '../../components/toolbar/toolbar.component';
 import { SettingsDialogComponent } from '../../dialogs/settings-dialog/settings-dialog.component';
 
+/**
+ * The shared module
+ */
 @NgModule({
   declarations: [ToolbarComponent, SettingsDialogComponent],
   imports: [

@@ -4,6 +4,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class GameService {
+  /**
+   * Check if there is a horizontal, vertical, or diagonal line of four of one's own token
+   *
+   * @param {Array<Array<number>>} board The board
+   * @param {number} currentPlayerPiece The token to look for
+   * @returns {boolean} Whether there is a line of four or not
+   */
   checkWin(board: Array<Array<number>>, currentPlayerPiece: number): boolean {
     const NB_OF_COLUMNS = board.length;
     const NB_OF_ROW = board.length > 0 ? board[0].length : 0;
@@ -70,6 +77,13 @@ export class GameService {
     return false;
   }
 
+  /**
+   * Check if the board is full and therefore no move can be done
+   *
+   * @param {Array<Array<number>>} board The board
+   * @param {Array<Array<number>>} board The current turn
+   * @returns {boolean} Whether the board is full or not
+   */
   checkMaxTurn(board: Array<Array<number>>, turn: number): boolean {
     const NB_OF_COLUMNS = board.length;
     const NB_OF_ROW = board.length > 0 ? board[0].length : 0;

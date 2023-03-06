@@ -2,6 +2,9 @@ import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 
+/**
+ * Dialog component to show game result
+ */
 @Component({
   selector: 'app-end-game-dialog',
   templateUrl: './end-game-dialog.component.html',
@@ -14,6 +17,9 @@ export class EndGameDialogComponent {
     public dialogRef: MatDialogRef<EndGameDialogComponent>
   ) {}
 
+  /**
+   * Return to home page
+   */
   goHome() {
     this.router.navigate(['home']);
     this.dialogRef.close();

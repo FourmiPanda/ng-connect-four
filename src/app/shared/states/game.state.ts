@@ -31,21 +31,39 @@ export interface GameStateModel {
 })
 @Injectable()
 export class GameState {
+  /**
+   * Get the board
+   *
+   * @returns {Array<Array<number>>} The board
+   */
   @Selector()
   static getBoard(state: GameStateModel) {
     return state.board;
   }
 
+  /**
+   * Get an array of string representing player disc color in hex format
+   *
+   * @returns {Array<string>} The array of discs color
+   */
   @Selector()
   static getDiscsColor(state: GameStateModel) {
     return state.discsColor;
   }
 
+  /**
+   * Get the current game mode
+   *
+   * @returns {GameMode} The current game mode
+   */
   @Selector()
   static getGameMode(state: GameStateModel) {
     return state.gameMode;
   }
 
+  /**
+   * Set the board with the entered param
+   */
   @Action(SetBoard)
   setBoard(
     { patchState }: StateContext<GameStateModel>,
@@ -56,6 +74,9 @@ export class GameState {
     });
   }
 
+  /**
+   * Set the disc color with the entered param
+   */
   @Action(SetDiscColor)
   setDiscColor(
     { getState, patchState }: StateContext<GameStateModel>,
@@ -68,6 +89,9 @@ export class GameState {
     });
   }
 
+  /**
+   * Reset the board by filling it with "0"
+   */
   @Action(ResetBoard)
   resetBoard({ patchState }: StateContext<GameStateModel>) {
     patchState({
@@ -76,6 +100,9 @@ export class GameState {
     });
   }
 
+  /**
+   * Set the game mode (versus player or versus AI)
+   */
   @Action(SetGameMode)
   setGameMode(
     { patchState }: StateContext<GameStateModel>,
@@ -86,6 +113,9 @@ export class GameState {
     });
   }
 
+  /**
+   * Set the status of the game (in progress or finished)
+   */
   @Action(SetStaus)
   setStatus(
     { patchState }: StateContext<GameStateModel>,
@@ -96,6 +126,11 @@ export class GameState {
     });
   }
 
+  /**
+   * Add a disc in the entered column parameter
+   *
+   * @throws {Error} Will throw an error if the disc cannot be added because the column is full.
+   */
   @Action(AddDisc)
   addDisc(
     { getState, patchState }: StateContext<GameStateModel>,
@@ -119,6 +154,9 @@ export class GameState {
     });
   }
 
+  /**
+   * Increase the turn
+   */
   @Action(NextTurn)
   nextTurn({ getState, patchState }: StateContext<GameStateModel>) {
     const state = getState();

@@ -14,6 +14,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { HomeComponent } from './home.component';
 import { SharedModule } from 'src/app/shared/modules/shared/shared.module';
 
+/**
+ * The home module
+ */
 @NgModule({
   declarations: [HomeComponent],
   imports: [

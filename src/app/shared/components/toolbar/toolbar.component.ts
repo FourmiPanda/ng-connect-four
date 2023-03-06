@@ -18,6 +18,9 @@ export class ToolbarComponent {
 
   @Input() quitButton = false;
 
+  /**
+   * Open settings dialog
+   */
   openSettingsDialog() {
     this.dialog.open(SettingsDialogComponent, {
       maxWidth: '100vw',
@@ -27,14 +30,27 @@ export class ToolbarComponent {
     });
   }
 
+  /**
+   * Set app language
+   *
+   * @param {string} language The language code
+   */
   setLanguage(language: string) {
     this.translate.use(language);
   }
 
+  /**
+   * Get flag image corresponding to current selected language
+   *
+   * @returns {string} Filepath to th flag image
+   */
   getCurrentLangImg() {
     return `assets/${this.translate.currentLang}.png`;
   }
 
+  /**
+   * Navigate to home page
+   */
   quit() {
     this.router.navigate(['home']);
   }

@@ -70,6 +70,11 @@ export class GameComponent {
     });
   }
 
+  /**
+   * Add a disc and check if the game is over if not the turn is over
+   *
+   * @param {number} colIndex The selected column index
+   */
   play(colIndex: number) {
     // Add disc
     try {
@@ -85,7 +90,6 @@ export class GameComponent {
         }
 
         // Check max turn
-
         const isMaxTurn = this.gameService.checkMaxTurn(this.board, this.turn);
         if (isMaxTurn) {
           this.endGame(true);
@@ -112,6 +116,11 @@ export class GameComponent {
     }
   }
 
+  /**
+   * Set the game status to finished and open end game dialog
+   *
+   * @param {boolean} isDraw Boolean whether the game result is a draw
+   */
   endGame(isDraw?: boolean) {
     this.store.dispatch(new SetStaus(GameStatus.FINISHED));
     this.dialog.open(EndGameDialogComponent, {
@@ -119,15 +128,6 @@ export class GameComponent {
         isDraw: isDraw,
         color: this.discsColor[this.turn % 2],
       },
-      maxWidth: '100vw',
-      maxHeight: '100vh',
-      height: 'fit-content',
-      width: 'fit-content',
-    });
-  }
-
-  openSettingsDialog() {
-    this.dialog.open(SettingsDialogComponent, {
       maxWidth: '100vw',
       maxHeight: '100vh',
       height: 'fit-content',

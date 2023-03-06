@@ -1,0 +1,28 @@
+{
+    "app": {
+        "home": {
+            "connect_four":"Connect four",
+            "choose_game_mode": "Choose game mode",
+            "one_versus_one": "1 vs 1",
+            "one_versus_ai": "1 vs AI"
+        },
+        "game": {
+            "home": "Home",
+            "game_over": "Game over",
+            "player_turn": "Player turn",
+            "winner_is": "The winner is"
+        },
+        "settings": {
+            "custom_your_view": "Custom your view"
+        },
+        "toolbar": {
+            "french": "French",
+            "english": "English"
+        },
+        "settings-dialog": {
+            "player_1": "Player 1",
+            "player_2": "Player 2",
+            "done": "Done"
+        }
+    }
+}

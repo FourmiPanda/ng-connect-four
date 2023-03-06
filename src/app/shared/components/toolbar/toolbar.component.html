@@ -1,0 +1,27 @@
+<mat-toolbar color="primary">
+    <span>{{ 'app.home.connect_four' | translate }}</span>
+    <span class="spacer"></span>
+    <button color="secondary" mat-icon-button [matMenuTriggerFor]="menu">
+     <mat-icon><img [src]="getCurrentLangImg()" class="flag-img"/></mat-icon>
+   </button>
+   <mat-menu #menu="matMenu" xPosition="before" yPosition="below">
+     <button mat-menu-item (click)="setLanguage('fr')">
+       <mat-icon>
+         <img src="assets/fr.png" class="flag-img"/>
+       </mat-icon>
+       <span>{{"app.toolbar.french" | translate}}</span>
+     </button>
+     <button mat-menu-item (click)="setLanguage('en')">
+       <mat-icon>
+         <img src="assets/en.png" class="flag-img"/>
+       </mat-icon>
+       <span>{{"app.toolbar.english" | translate}}</span>
+     </button>
+   </mat-menu>
+    <button color="secondary"  (click)="openSettingsDialog()" mat-icon-button>
+     <mat-icon>palette</mat-icon>
+   </button>
+   <button *ngIf="quitButton" color="secondary"  (click)="quit()" mat-icon-button>
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+  </mat-toolbar>

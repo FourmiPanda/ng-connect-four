@@ -1,0 +1,17 @@
+<div class="game-over-dialog">
+    <div>
+        <h2>{{'app.game.game_over' | translate}}</h2>
+    </div>
+
+    <div style="flex-grow: 1;">
+        <span *ngIf="data.isDraw">{{'app.game.draw' | translate}} !</span>
+        <div *ngIf="!data.isDraw">
+            <span>{{"app.game.winner_is" | translate}}</span>
+            <app-disc class="disc" [color]="data.color"></app-disc>
+        </div>
+    </div>
+
+    <div>
+        <button (click)="goHome()" mat-flat-button color="primary">{{'app.game.home' | translate}}</button>
+    </div>
+</div>

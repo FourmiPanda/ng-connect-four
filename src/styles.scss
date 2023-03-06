@@ -1,1 +1,101 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+$forest-green-palette: (
+ 50: #e1f1ee,
+ 100: #b4dcd4,
+ 200: #85c7b9,
+ 300: #5ab09e,
+ 400: #3e9f8a,
+ 500: #2e8e78,
+ 600: #2a826c,
+ 700: #25725d,
+ 800: #206250,
+ 900: #184636,
+ contrast: (
+  50: rgba(black, 0.87),
+  100: rgba(black, 0.87),
+  200: rgba(black, 0.87),
+  300: white,
+  400: white,
+  500: white,
+  600: white,
+  700: white,
+  800: white,
+  900: white,
+  A100: rgba(black, 0.87),
+  A200: white,
+  A400: white,
+  A700: white,
+)
+);
+
+$crimson-red-palette: (
+ 50: #e1f1ee,
+ 100: #b4dcd4,
+ 200: #85c7b9,
+ 300: #5ab09e,
+ 400: #3e9f8a,
+ 500: #2e8e78,
+ 600: #2a826c,
+ 700: #25725d,
+ 800: #206250,
+ 900: #184636,
+ contrast: (
+  50: rgba(black, 0.87),
+  100: rgba(black, 0.87),
+  200: rgba(black, 0.87),
+  300: white,
+  400: white,
+  500: white,
+  600: white,
+  700: white,
+  800: white,
+  900: white,
+  A100: rgba(black, 0.87),
+  A200: white,
+  A400: white,
+  A700: white,
+)
+);
+
+$ng-connect-four-primary: mat.define-palette($forest-green-palette);
+$ng-connect-four-accent: mat.define-palette($crimson-red-palette);
+
+
+$ng-connect-four-theme: mat.define-light-theme((
+  color: (
+    primary: $ng-connect-four-primary,
+    accent: $ng-connect-four-accent
+  )
+));
+
+$ng-connect-four-dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $ng-connect-four-primary,
+    accent: $ng-connect-four-accent,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($ng-connect-four-theme);
+
+.dark-mode {
+    @include mat.all-component-colors($ng-connect-four-dark-theme);
+}
+
+  
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@supports (-webkit-touch-callout: none) {
+  body {
+    /* The hack for Safari */
+    min-height: -webkit-fill-available;
+  }
+}

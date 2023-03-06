@@ -1,0 +1,16 @@
+.home-container {
+    height: 100vh;
+    width: 100%;
+}
+
+.start-menu {
+    width: 100%;
+    height: calc(100% - 64px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.start-menu__start-button {
+    margin: 15px;
+}

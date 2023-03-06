@@ -1,0 +1,23 @@
+<div class="game-container">
+
+    <app-toolbar [quitButton]="true"></app-toolbar>
+
+     <div class="board-container">
+        <div class="board">
+            <div class="board__column" *ngFor="let col of board$ | async; let colIndex = index">
+                <div class="cell__box" *ngFor="let cell of col">
+                    <app-disc class="cell__box__disc" [hidden]="cell === 0" [color]="cell === 0 ? 'transparent' : discsColor[cell - 1]" [animate]="cell != 0"></app-disc>
+                </div>
+                <button [disabled]="gameStatus === GameStatus.FINISHED" class="action-button" (click)="play(colIndex)" [name]="'col-' + colIndex" mat-icon-button>
+                    <mat-icon>arrow_downward</mat-icon>
+                </button>
+            </div>
+        </div>
+            
+        <div class="player-turn-info">
+            <span>{{'app.game.player_turn' | translate}} : </span>
+            <app-disc class="player-turn-info__disc" [color]="discsColor[turn % 2]"></app-disc>
+        </div>
+      </div>
+
+</div>

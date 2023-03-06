@@ -1,0 +1,32 @@
+<div class="settings-dialog">
+    <div>
+        <h2>{{'app.settings.custom_your_view' | translate}} </h2>
+    </div>
+
+    <div class="settings-dialog__options">
+        <div>
+
+            <mat-slide-toggle [checked]="darkMode" (change)="changeTheme()" >
+                <mat-icon *ngIf="darkMode" aria-hidden="false" fontIcon="dark_mode"></mat-icon>
+                <mat-icon *ngIf="!darkMode" aria-hidden="false" fontIcon="light_mode"></mat-icon>
+            </mat-slide-toggle>
+
+        </div>
+        <div>
+            <label for="player_1_disc_color">{{"app.settings-dialog.player_1" | translate}}</label>
+            <input (input)="setDiscColor(0, $event)" type="color" name="player_1_disc_color"
+            [value]="discsColor[0]">
+        </div>
+
+        <div>
+            <label for="player_2_disc_color">{{"app.settings-dialog.player_2" | translate}}</label>
+            <input (input)="setDiscColor(1, $event)" type="color" name="player_2_disc_color"
+            [value]="discsColor[1]">
+        </div>
+
+    </div>
+
+    <div>
+        <button mat-flat-button color="primary" [mat-dialog-close]="true">{{"app.settings-dialog.done" | translate}}</button>
+    </div>
+</div>

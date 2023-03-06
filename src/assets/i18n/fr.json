@@ -1,0 +1,28 @@
+{
+    "app": {
+        "home": {
+            "connect_four":"Puissance 4",
+            "choose_game_mode": "Choisir le mode de jeu",
+            "one_versus_one": "1 vs 1",
+            "one_versus_ai": "1 vs IA"
+        },
+        "game": {
+            "home": "Accueil",
+            "game_over": "Fin du jeu",
+            "player_turn": "Tour du joueur",
+            "winner_is": "Le gagnant est"
+        },
+        "settings": {
+            "custom_your_view": "Personnalisez votre affichage"
+        },
+        "toolbar": {
+            "french": "Français",
+            "english": "Anglais"
+        },
+        "settings-dialog": {
+            "player_1": "Joueur 1",
+            "player_2": "Joueur 2",
+            "done": "Terminer"
+        }
+    }
+}

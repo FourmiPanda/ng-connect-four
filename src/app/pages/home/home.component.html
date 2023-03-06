@@ -1,0 +1,12 @@
+<div class="home-container">
+    <app-toolbar></app-toolbar>
+     <div class="start-menu">
+        <div>
+          <h1> {{ 'app.home.choose_game_mode' | translate }} </h1>
+        </div>
+        <div>
+            <button class="start-menu__start-button" (click)="startGame(false)" mat-raised-button color="primary">{{"app.home.one_versus_one" | translate}}</button>
+            <button class="start-menu__start-button" (click)="startGame(true)" mat-raised-button color="primary">{{"app.home.one_versus_ai" | translate}}</button>
+        </div>
+      </div>
+</div>

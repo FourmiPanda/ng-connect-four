@@ -1,0 +1,13 @@
+.board__dot {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid black;
+  }
+
+
+.board__dot--is-hidden {
+    background-color: transparent;
+    border-color: transparent;
+}

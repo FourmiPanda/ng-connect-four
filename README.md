@@ -9,6 +9,10 @@ Ng Connect Four is an Angular app where you can play a two-player connection rac
 - Responsive
 - Fast performance
 
+## Demo
+
+A live demo is available — [see it in action](https://ng-connect-four.web.app/)!
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
